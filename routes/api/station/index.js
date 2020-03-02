@@ -1,0 +1,11 @@
+const express = require("express")
+const stationController = require('./controller')
+const router = express.Router()
+const { authenticate, authorize } = require("../../../middlewares/auth")
+router.get("/", stationController.getStation)
+router.get("/:id", stationController.getStationById)
+router.post("/", authenticate, authorize(["client", "admin"]), stationController.postStation)
+router.put("/:id", authenticate, authorize(["admin"]), stationController.putStationById)
+router.patch("/:id", authenticate, authorize(["admin", "client"]), stationController.updateStationById)
+router.delete("/:id", authenticate, authorize(["admin", "client"]), stationController.deleteStation)
+module.exports = router

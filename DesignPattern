@@ -1,0 +1,10 @@
+Nodejs Frameworks:
+Express: Middleware, API, Authentication, authorization, validation, upload image...
+SocketIO: Observer
+Loopback 3: observer + Middleware => khi app lon
+logic
+Authentication
+Loopback4 (active) + nestjs(LTS): IoC(inversion of control) dependency Injection
+Route, controller, repository, model,
+service, inject
+role based access control
