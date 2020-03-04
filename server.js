@@ -19,14 +19,14 @@ mongoose.connect(config.mongoUri, {
 const app = express()
 app.use(express.json())
 app.use("/api", require("./routes/api/index"))
-app.get('/', (req, res, next) => {
-    console.log("mdw1")
-    res.json({ message: "Stop" })
-    // next()
-}, (req, res, next) => {
-    console.log("mdw2")
-}
-)
+// app.get('/', (req, res, next) => {
+//     console.log("mdw1")
+//     res.json({ message: "Stop" })
+//     // next()
+// }, (req, res, next) => {
+//     console.log("mdw2")
+// }
+// )
 app.use("/images", express.static("uploads"))
 const port = process.env.PORT || config.port
 app.listen(port, () => {
