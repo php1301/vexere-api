@@ -9,7 +9,7 @@
     "start:local:win": "set NODE_ENV=local& node server.js",
     "start:staging": "export NODE_ENV=staging && node server.js",
     "start:staging:win": "set NODE_ENV=staging& node server.js",
-    "debug": "nodemon server.js"
+    "debug": "set NODE_ENV=local& nodemon server.js"
   },
   "author": "",
   "license": "ISC",
